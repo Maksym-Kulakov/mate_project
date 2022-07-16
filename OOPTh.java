@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class OOPTh {
     private double baseSalary;
 
@@ -15,6 +17,15 @@ public class OOPTh {
         System.out.println(bob.getBaseSalary());
 
         System.out.println(OOPTh.getSalary(100));
+
+        //with ENAM
+
+        OOPTh_Enam spring = OOPTh_Enam.SPRING;
+        System.out.println(spring);
+
+        OOPTh_Enam[] values = OOPTh_Enam.values();
+        System.out.println(Arrays.toString(values));
+
     }
 
     // procedure - method as Abstraction
