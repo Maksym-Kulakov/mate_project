@@ -1,7 +1,12 @@
 import java.util.Arrays;
+import java.util.Random;
 
 public class OOPTh {
     private double baseSalary;
+
+    OOPTh(){
+
+    }
 
     //OOP - method to appr Object
     public OOPTh (double baseSalary) {
@@ -10,6 +15,12 @@ public class OOPTh {
 
     public double getBaseSalary() {
         return baseSalary * 1.1;
+    }
+
+    //random enam
+    public OOPTh_Enam getSeason () {
+        int index = new Random().nextInt(OOPTh_Enam.values().length);
+        return  OOPTh_Enam.values()[index];
     }
 
     public static void main(String[] args) {
@@ -26,7 +37,21 @@ public class OOPTh {
         OOPTh_Enam[] values = OOPTh_Enam.values();
         System.out.println(Arrays.toString(values));
 
+        //Random
+
+        Random random = new Random();
+        int value = random.nextInt(100);
+        System.out.println(value);
+
+        //Random + Enam
+        OOPTh season = new OOPTh();
+        System.out.println(season.getSeason());
+
     }
+
+
+
+
 
     // procedure - method as Abstraction
     public static double getSalary (double baseSalary) {
